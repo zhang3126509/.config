@@ -18,7 +18,9 @@
 
 [colors]
 ;background = ${xrdb:color0:#222}
-background = #222
+#background = #222
+#background-alt = #444
+background = #b0222222
 background-alt = #444
 ;foreground = ${xrdb:color7:#222}
 foreground = #dfdfdf
@@ -56,7 +58,7 @@ font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
 font-2 = siji:pixelsize=10;1
 
 modules-left = bspwm i3
-modules-center = mpd
+#modules-center = mpd
 modules-right = filesystem xbacklight alsa pulseaudio xkeyboard memory cpu wlan eth battery temperature date powermenu
 
 tray-position = right
@@ -220,7 +222,7 @@ label = %percentage_used%%
 
 [module/wlan]
 type = internal/network
-interface = net1
+interface = wlp5s0 
 interval = 3.0
 
 format-connected = <ramp-signal> <label-connected>
@@ -242,7 +244,7 @@ ramp-signal-foreground = ${colors.foreground-alt}
 
 [module/eth]
 type = internal/network
-interface = sit0
+interface = enp0s25 
 interval = 3.0
 
 format-connected-underline = #55aa55
